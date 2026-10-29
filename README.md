@@ -53,6 +53,52 @@ Tools are listed because they appear in the thesis; inclusion does not imply tha
 
 See [Findings & limitations](docs/findings.md) for a more detailed, appropriately qualified summary.
 
+
+## Experimental Evidence
+
+The following screenshots document selected experiments conducted during the master's thesis research. All testing was performed in a controlled laboratory environment using the assessed IoT surveillance devices.
+
+### 1. Network Service Discovery — Nmap
+
+![Nmap Service Discovery](images/nmap-service-discovery.png)
+
+Nmap was used to identify accessible network services and examine the exposed ports of the tested IP cameras. The results supported the assessment of each device's network exposure and potential attack surface.
+
+### 2. HTTP Traffic Analysis — Wireshark
+
+![Wireshark HTTP Traffic Analysis](images/wireshark-http-traffic-analysis.png)
+
+Wireshark was used to inspect communication between a tested camera and its management interface. The captured HTTP traffic revealed authentication-related parameters, demonstrating the importance of protecting credentials during transmission. Sensitive values have been redacted.
+
+### 3. Password Security Assessment — John the Ripper
+
+![John the Ripper Password Audit](images/john-the-ripper-password-audit.png)
+
+John the Ripper was used to assess the strength of a password associated with the laboratory environment. The experiment demonstrated the risks of weak credentials and the importance of secure password management.
+
+### 4. Wireless Deauthentication Testing
+
+![Wireless Deauthentication Test](images/wireless-deauthentication-test.png)
+
+A controlled wireless deauthentication experiment was performed to evaluate the availability of the tested camera's wireless connection. The observations highlighted the potential impact of wireless connectivity disruptions on surveillance systems. Device identifiers have been redacted.
+
+### 5. Camera Availability — Before and During Testing
+
+![Camera Availability Before and After](images/camera-availability-before-after.png)
+
+The screenshots compare the camera application's normal operating state with its behavior during a wireless deauthentication experiment. The application displayed a connection attempt instead of the live video feed, illustrating the observed temporary loss of availability.
+
+### 6. RTSP Video Stream Access Validation
+
+![RTSP Stream Access Validation](images/rtsp-stream-access-validation.png)
+
+VLC Media Player was used to verify access to a camera's RTSP video stream in the controlled laboratory environment. This experiment supported the analysis of streaming access and authentication-related security considerations.
+
+---
+
+**Research scope:** These observations apply to the specific devices, configurations, and laboratory conditions evaluated in the thesis. They should not be interpreted as universal vulnerabilities affecting all devices from the respective manufacturers.
+
+
 ## Defensive recommendations
 
 - Replace default credentials and use strong, unique passwords.
